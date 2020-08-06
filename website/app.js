@@ -1,5 +1,6 @@
 /* Global Variables */
-let baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
+let openWeatherMapBaseURL =
+  "http://api.openweathermap.org/data/2.5/weather?zip=";
 
 let apiKey = "&appid=e6ec9c6f7206c2d268a5df847e33673b";
 
@@ -40,9 +41,24 @@ const getRequest = async (url = "") => {
 };
 
 document.getElementById("generate").addEventListener("click", () => {
-  getRequest(baseURL + document.getElementById("zip").value + apiKey).then(
-    function (data) {
-      console.log(data);
-    }
-  );
+  getRequest(
+    openWeatherMapBaseURL + document.getElementById("zip").value + apiKey
+  )
+    .then((data) => {
+      postRequest("/data", {
+        temperature: data.main.temp,
+        date: newDate,
+        user_response: document.getElementById("feelings").value,
+      });
+    })
+    .then(async (data) => {
+      try {
+        const data = await getRequest("/data");
+        document.getElementById("date").innerText = data.temperature;
+        document.getElementById("temp").innerText = data.date;
+        document.getElementById("content").innerText = data.user_response;
+      } catch (error) {
+        console.log("error", error);
+      }
+    });
 });

@@ -8,23 +8,33 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Some packages in npm may needed
+Some packages need to be install via npm check Installing section
 
 ### Installing
+
+open terminal in project directory then do the command
 
 ```
 npm install
 ```
 
-Then
+To get all dependancies Then
 
 ```
 node server.js
 ```
 
+or
+
+```
+ npm start
+```
+
+To start the Server
+
 ## Built With
 
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Vanilla JavaScript
 
 ## Authors
 

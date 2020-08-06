@@ -30,18 +30,17 @@ const server = app.listen(port, () =>
   console.log(`server running on localhost: ${port}`)
 );
 
+// To get the data of the application
 app.get("/data", (request, response) => {
-  console.log(data);
   response.send(projectData);
 });
 
+// To save data i the application
 app.post("/data", (request, response) => {
-  newEntry = {
-    animal: req.body.temperature,
-    facts: req.body.date,
-    fav: req.body.user_response,
+  projectData = {
+    temperature: request.body.temperature,
+    date: request.body.date,
+    user_response: request.body.user_response,
   };
-  projectData.push(newEntry);
-  console.log(projectData);
-  res.send(projectData);
+  response.send(projectData);
 });
