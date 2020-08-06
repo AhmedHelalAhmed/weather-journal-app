@@ -1,10 +1,43 @@
-# Weather-Journal App Project
+# Project Title
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+Weather-Journal App Project is Asynchronous web app
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+## Getting Started
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Some packages in npm may needed
+
+### Installing
+
+```
+npm install
+```
+
+Then
+
+```
+node server.js
+```
+
+## Built With
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript
+
+## Authors
+
+- **Ahmed Helal Ahmed** - _Initial work_ - [Ahmed Helal Ahmed](https://github.com/AhmedHelalAhmed)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
