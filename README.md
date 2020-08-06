@@ -1,4 +1,4 @@
-# Project Title
+# Weather-Journal App Project
 
 Weather-Journal App Project is Asynchronous web app
 
