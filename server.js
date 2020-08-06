@@ -29,3 +29,19 @@ const port = 3000;
 const server = app.listen(port, () =>
   console.log(`server running on localhost: ${port}`)
 );
+
+app.get("/data", (request, response) => {
+  console.log(data);
+  response.send(projectData);
+});
+
+app.post("/data", (request, response) => {
+  newEntry = {
+    animal: req.body.temperature,
+    facts: req.body.date,
+    fav: req.body.user_response,
+  };
+  projectData.push(newEntry);
+  console.log(projectData);
+  res.send(projectData);
+});
